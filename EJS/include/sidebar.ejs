@@ -1,0 +1,70 @@
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+<div class="container-fluid position-relative d-flex p-0">
+  <!-- Sidebar Start -->
+  <div class="sidebar pe-4 pb-3">
+    <nav class="navbar bg-secondary navbar-dark">
+      <a href="/index" class="navbar-brand mx-4 mb-3">
+        <h3 class="text-primary">
+          <i class="fa fa-shield" aria-hidden="true"></i> ThreatHunt
+        </h3>
+      </a>
+      <div class="d-flex align-items-center ms-4 mb-4">
+        <div class="position-relative">
+          <img
+            class="rounded-circle"
+            src="cb.jpeg"
+            alt=""
+            style="width: 40px; height: 40px"
+          />
+          <div
+            class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"
+          ></div>
+        </div>
+        <div class="ms-3">
+          <h6 class="mb-0">LEO</h6>
+        </div>
+      </div>
+      <div class="navbar-nav w-100">
+        <a href="/index" class="nav-item nav-link active"
+          ><i class="fa fa-tachometer"></i> Dashboard</a
+        >
+        <a href="/home" class="nav-item nav-link"
+          ><i class="fa fa-home" aria-hidden="true"></i> Home</a
+        >
+        <a href="/note" class="nav-item nav-link"
+          ><i class="fa fa-sticky-note" aria-hidden="true"></i> Notes</a
+        >
+        <a href="/contact" class="nav-item nav-link"
+          ><i class="fa fa-handshake-o" aria-hidden="true"></i> Contact Us</a
+        >
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+            ><i class="bi bi-chat-square-text"></i>Live Chat</a
+          >
+          <div class="dropdown-menu bg-transparent border-0">
+            <a href="signin" class="dropdown-item">Sign In</a>
+            <a href="signup" class="dropdown-item">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Sidebar End -->
+</div>
+<script>
+  window.onload = function () {
+    var currentPage = window.location.pathname;
+    var navLinks = document.querySelectorAll(".navbar-nav a");
+    navLinks.forEach(function (link) {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  };
+</script>

@@ -1,0 +1,25 @@
+{
+  "name": "cybersecurity",
+  "version": "1.0.0",
+  "description": "cybersecurity",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0",
+    "socket.io": "^4.7.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

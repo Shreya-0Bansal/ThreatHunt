@@ -1,0 +1,122 @@
+    <%- include('include/header.ejs') %> 
+    <style>
+    .message { 
+    color: aliceblue;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    align-self: flex-end; /* Align messages to the right */
+    
+    }
+    .chat-container{
+    background-color: #191c24;
+    
+    }
+    </style>
+<body>
+
+    <%- include('include/sidebar.ejs')  %>
+    <%- include('include/navbar.ejs')  %>
+
+            <div class="container-fluid pt-4 px-4">
+            <div class="row g-4">
+                <div class="screen join-screen col-sm-12 col-xl-12 active">
+                    <div class="rounded p-4 chat-container">
+                        <h3>Chat Room</h3>
+                        <div id="chat-area" class="message">
+                            <!-- Messages will be displayed here -->
+                            
+                        </div>
+                        <form id="form" class="mt-4">
+                            <div class="input-group mb-3">
+                                <input type="hidden" id="name" value="<%= JSON.stringify(use) %>">
+                                <input type="text" class="form-control" id="input" placeholder="Type a message" autocomplete="off">
+                                <button class="btn btn-primary" id="addBtn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="/socket.io/socket.io.js"></script>
+<script></script>
+
+    
+<!-- Footer Start -->
+<%- include('include/footer.ejs')  %>        
+<!-- Footer End -->
+
+        <script>
+            function highlightAndScroll() {
+                var searchQuery = document.getElementById("searchInput").value;
+                var content = document.body.innerHTML;
+        
+                var regex = new RegExp(searchQuery, 'gi');
+                var highlightedContent = content.replace(regex, '<mark>$&</mark>');
+        
+                document.body.innerHTML = highlightedContent;
+        
+                var firstMatch = document.querySelector("mark");
+                if (firstMatch) {
+                    firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        </script>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="chart.min.js"></script>
+<script src="easing.min.js"></script> 
+<script src="waypoints.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="moment.min.js"></script>
+<script src="moment-timezone.min.js"></script>
+<script src="tempusdominus-bootstrap-4.min.js"></script> -->
+<!-- Template Javascript -->
+<script>
+    (function ($) {
+    "use strict";
+
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+        if ($("#spinner").length > 0) {
+            $("#spinner").removeClass("show");
+        }
+        }, 1);
+    };
+    spinner();
+
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+        $(".back-to-top").fadeIn("slow");
+        } else {
+        $(".back-to-top").fadeOut("slow");
+        }
+    });
+    $(".back-to-top").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
+        return false;
+    });
+
+    // Sidebar Toggler
+    $(".sidebar-toggler").click(function () {
+        $(".sidebar, .content").toggleClass("open");
+        return false;
+    });
+
+})(jQuery);
+</script>
+
+<!-- <script src="script.js"></script> -->
+<script src="chat.js"></script>
+
+</body>

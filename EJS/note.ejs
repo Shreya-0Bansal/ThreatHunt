@@ -1,0 +1,58 @@
+<%- include('include/header.ejs') %> 
+<body>
+    <%- include('include/sidebar.ejs')  %>
+    <%- include('include/navbar.ejs')  %>
+
+    <!-- Blank Start -->
+    <div class="container my-3"> 
+        <h1>Take your Notes here</h1> 
+        <div class="card"> 
+            <div class="card-body"> 
+                <h5 class="card-title" style= 
+                "color:black"> 
+                    Add a Note 
+
+                </h5> 
+                <div class="form-group"> 
+                    <textarea class="form-control" style= 
+                    "background-color:transparent"
+                        id="addTxt" rows="3"> 
+                    </textarea> 
+                </div> <br>
+                <button class="btn btn-primary"
+                    id="addBtn" style= 
+                    "background-color:#eb7216"> 
+                    Add Note 
+                </button> 
+            </div> 
+        </div> 
+        <hr> 
+        <h1>Your Notes</h1> 
+        <hr> 
+        
+        <div id="notes" class= 
+            "row container-fluid"> 
+        </div> 
+    </div> 
+    <!-- Blank End -->
+
+    <%- include('include/footer.ejs')  %>
+    <!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+<!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="chart.min.js"></script>
+    <script src="easing.min.js"></script>
+    <script src="waypoints.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="moment-timezone.min.js"></script>
+    <script src="tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Template Javascript -->
+    <script src="script.js"></script>
+    <script src="gfg.js"></script>
+</body>

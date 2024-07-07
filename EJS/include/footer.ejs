@@ -1,0 +1,31 @@
+<!-- Footer Start -->
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-secondary rounded-top p-4">
+        <div class="row">
+            <div class="col-12 col-sm-6 text-center text-sm-start">
+                &copy; <a href="#">ThreatHunt</a>, All Right Reserved. 
+            </div>
+            <div class="col-12 col-sm-6 text-center text-sm-end">
+                Designed By <a href="#">Shreya</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function highlightAndScroll() {
+        var searchQuery = document.getElementById("searchInput").value;
+        var content = document.body.innerHTML;
+
+        var regex = new RegExp(searchQuery, 'gi');
+        var highlightedContent = content.replace(regex, '<mark>$&</mark>');
+
+        document.body.innerHTML = highlightedContent;
+
+        var firstMatch = document.querySelector("mark");
+        if (firstMatch) {
+            firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+</script>
+<!-- Footer End -->

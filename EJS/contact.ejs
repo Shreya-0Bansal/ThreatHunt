@@ -1,0 +1,154 @@
+<%- include('include/header.ejs') %> 
+  <body>
+    <%- include('include/sidebar.ejs')  %>
+    <%- include('include/navbar.ejs')  %>
+        <section class="spacer">
+          <div class="testimonial-section">
+            <div class="testi-user-img">
+              <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img class="u1" src="t1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="u2" src="t2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="u3" src="Davis_Serene.jpg" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="u4" src="t4.jpeg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="user-saying">
+              <div class="swiper-container testimonial">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="quote">
+                      <img
+                        class="quote-icon"
+                        src="https://md-aqil.github.io/images/quote.png"
+                      />
+                      <p>
+                        “There are only two types of companies in the world:
+                        those that have been breached and know it and those that
+                        have been breached and don't know it...“
+                      </p>
+                      <div class="name">Ted Schlein</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quote">
+                      <img
+                        class="quote-icon"
+                        src="https://md-aqil.github.io/images/quote.png"
+                      />
+
+                      <p>
+                        “Growth hackers are typically computer engineers that build great marketing ideas into the product during the development process...”
+                      </p>
+                      <div class="name">Ryan Holiday</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quote">
+                      <img
+                        class="quote-icon"
+                        src="https://md-aqil.github.io/images/quote.png"
+                        alt=""
+                      />
+
+                      <p>
+                        “A breach alone is not a disaster, but mishandling it is...”
+                      </p>
+                      <div class="name">Serene Davis</div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="quote">
+                      <img
+                        class="quote-icon"
+                        src="https://md-aqil.github.io/images/quote.png"
+                        alt=""
+                      />
+
+                      <p>
+                        
+                        “Hacking just means building something quickly or testing the boundaries of what can be done...”
+                      </p>
+                      <div class="name"> Mark Zuckerberg</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                      <form action="/contact" method="post">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h3>Contact Us</h3>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Name">
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Send</button>
+                    
+                  </form>
+                  <% if (success) { %>
+                    <p class="text-success">Message submitted successfully!</p>
+                <% } %>
+              </div>
+                </div>
+            </div>
+        </div>
+        
+        <link
+          rel="stylesheet"
+          href="https://md-aqil.github.io/images/swiper.min.css"
+        />
+
+        <!-- END OF TESTIMONIALS -->
+        <%- include('include/footer.ejs') %> 
+      </div>
+      <!-- Content End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://md-aqil.github.io/images/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="chart.min.js"></script>
+    <script src="chart.min.js"></script>
+    <script src="easing.min.js"></script>
+    <script src="waypoints.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="moment-timezone.min.js"></script>
+    <script src="tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+  </body>
+</html>
