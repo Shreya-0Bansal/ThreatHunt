@@ -32,14 +32,14 @@ app.use("/contact", (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "threathunt741@gmail.com", 
-      pass: "guqiwqtrvwxbtrpz",
+      user: "#", 
+      pass: "#",
     },
   });
 
   // Email content
   let mailOptions = {
-    from: "threathunt741@gmail.com",
+    from: "#",
     to: email,
     subject: "Thank You for Contacting ThreatHunt",
     text: "Dear " + name +"\n\nThanks for reaching out to ThreatHunt.\n\nWe've got your message and will get back to you soon. Stay tuned! \n\nBest Regards, \n\nThreat Hunt Dashboard Team",
